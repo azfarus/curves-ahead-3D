@@ -18,6 +18,8 @@ public class RopeUIController : MonoBehaviour
 
     [Header("Value Display")]
     [SerializeField] private TMP_Text valueText;
+    [SerializeField] private TMP_Text coeffAText;
+    [SerializeField] private TMP_Text coeffBText;
 
     public static bool isMenuOpen = false;
 
@@ -83,12 +85,16 @@ public class RopeUIController : MonoBehaviour
 
         valueText.text =
             $"Radius: {ropeScript.ropeRadius:0.00}\n" +
-            $"Length: {ropeScript.curveLength:0.00}\n\n" +
-
-            $"Coeff A:      " + $"Coeff B:\n"+
-            $"A0: {ropeScript.coeffA[0]:0.00}" + $"     B0: {ropeScript.coeffB[0]:0.00}\n" +
-            $"A1: {ropeScript.coeffA[1]:0.00}" + $"     B1: {ropeScript.coeffB[1]:0.00}\n" +
-            $"A2: {ropeScript.coeffA[2]:0.00}" + $"     B2: {ropeScript.coeffB[2]:0.00}";
+            $"Length: {ropeScript.curveLength:0.00}\n\n";
+        coeffAText.text = $"Coeff A:\n" +
+                          $"A0: {ropeScript.coeffA[0]:0.00}\n" +
+                          $"A1: {ropeScript.coeffA[1]:0.00}\n" +
+                          $"A2: {ropeScript.coeffA[2]:0.00}"; 
+        
+        coeffBText.text =  $"Coeff B:\n"+
+                           $"B0: {ropeScript.coeffB[0]:0.00}\n" +
+                           $"B1: {ropeScript.coeffB[1]:0.00}\n" +
+                           $"B2: {ropeScript.coeffB[2]:0.00}";
 
 
     }

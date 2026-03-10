@@ -54,7 +54,6 @@ public class CrosshairDetection : MonoBehaviour
                
                     
                     curveIndex=start;
-                    Debug.Log($"{curveIndex} is hit");
                     break;
                 }
                 
